@@ -1528,7 +1528,7 @@ function level_3() {
             r.scale = 0.5
         }
         if (ppe3 == 1 && ppe2 == 1 && (r.touched(cursor) && r.costumeId == 5)) {
-            alert(1);
+            //alert(1);
 			ppe.x = 440
             ppe.y = 300
             ppe.costumeId = 0
