@@ -712,6 +712,23 @@ function level_3() {
             r.hidden = true
             next_level()
         }
+
+        if (lol.costumeId == 3 && lol2.costumeId == 0 && lol3.costumeId == 2 && lol4.costumeId == 1) {
+            lol.destroy()
+            lol2.destroy()
+            lol3.destroy()
+            lol4.destroy()
+            cco.costumeId = 1
+            lol.costumeId = 0
+            lol2.costumeId = 0
+            lol3.costumeId = 0
+            lol4.costumeId = 0
+            cco.x += 20
+            cco.y -= 50
+            Isis_jj.hidden = false
+            Isis_jj.direction += 90
+			lolPassed = true;
+        }
     });
     when("click", function () {
         if (way1.touched(cursor) && r.costumeId == 0) {
@@ -1602,22 +1619,6 @@ function level_3() {
             } else {
                 pot_jj.hidden = false
             }
-        }
-        if (lol.costumeId == 3 && lol2.costumeId == 0 && lol3.costumeId == 2 && lol4.costumeId == 1) {
-            lolPassed = true;
-            lol.destroy()
-            lol2.destroy()
-            lol3.destroy()
-            lol4.destroy()
-            cco.costumeId = 1
-            lol.costumeId = 0
-            lol2.costumeId = 0
-            lol3.costumeId = 0
-            lol4.costumeId = 0
-            cco.x += 20
-            cco.y -= 50
-            Isis_jj.hidden = false
-            Isis_jj.direction += 90
         }
         if (mummy.touched(cursor)) {
             mummy_up.x = 320
