@@ -133,7 +133,7 @@ function level_1() {
         check(Seth, 2)
     });
 
-	document.getElementById("loading").style.display = "none";
+	// document.getElementById("loading").style.display = "none";
 }
 
 
