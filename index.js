@@ -9,7 +9,12 @@ Game.set({
     debugMode: true // Default: false
 });
 
-setBackdrop("loading.gif");
+var loading = createSprite({
+        x: 280,
+        y: 250,
+        scale: 0.8, // 1.2倍大
+        costumes: ["loading.gif"]
+    });
 
 sound.play("1 Hour of Ancient Egyptian Music.mp3", true);
 Game.preload([
