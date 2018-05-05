@@ -115,11 +115,12 @@ function level_1() {
     });*/
 // Test
 	function onMouseMove() {
-			Ra.x = cursor.x;
-			Ra.y = cursor.y;	
+		Ra.x = cursor.x;
+		Ra.y = cursor.y;	
 	}	
     Ra.when("mousedown", function () {
         //check(Ra, 3)
+		onMouseMove();
 		document.addEventListener('mousemove', onMouseMove);
 		Ra.when("mouseup", function () {
 			document.removeEventListener('mousemove', onMouseMove);
