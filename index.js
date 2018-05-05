@@ -2028,7 +2028,7 @@ function level_3() {
     ppe.when("mousedown", function () {
 	    if (ppe2 == 1) {
 
-	        ppe.costumeId = 3
+	        //ppe.costumeId = 3
 	        ppe3 = 1
 
 			document.addEventListener('mousemove', DragPPE);
