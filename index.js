@@ -2039,7 +2039,7 @@ function level_3() {
 			ppe.when("mouseup", function () {
 				document.removeEventListener('mousemove', DragPPE);
 				// Drop.
-		        if (r.touched(ppe)) {    
+		        if (r.touched(ppe) && r.costumeId == 5) {    
 					ppe.x = 440
 		            ppe.y = 300
 		            ppe.costumeId = 0
