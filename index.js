@@ -114,13 +114,16 @@ function level_1() {
         check(Ra, 3)
     });*/
 // Test
+	function onMouseMove() {
+			Ra.x = cursor.x;
+			Ra.y = cursor.y;	
+	}	
     Ra.when("mousedown", function () {
         //check(Ra, 3)
-		when("mousemove", function () {
-			Ra.x = cursor.x;
-			Ra.y = cursor.y;
+		document.addEventListener('mousemove', onMouseMove);
+		Ra.when("mouseup", function () {
+			document.removeEventListener('mousemove', onMouseMove);
 		});
-		//alert('cursor.x=' + cursor.x + ', cursor.y=', cursor.y);
 		return;
     });
 
