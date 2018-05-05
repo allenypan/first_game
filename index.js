@@ -2031,7 +2031,7 @@ function level_3() {
     ppe.when("mousedown", function () {
 	    if (ppe2 == 1 && ppe3 == 0 && ppe4 == 1) {
 
-	        ppe.costumeId = 3
+	        //ppe.costumeId = 3
 	        ppe3 = 1
 
 			document.addEventListener('mousemove', DragPPE);
@@ -2039,7 +2039,7 @@ function level_3() {
 			ppe.when("mouseup", function () {
 				document.removeEventListener('mousemove', DragPPE);
 				// Drop.
-		        if (ppe3 == 1 && ppe2 == 1 && (r.touched(ppe) && r.costumeId == 5)) {    
+		        if (ppe3 == 1 && ppe2 == 1 && (r.touched(cursor) && r.costumeId == 5)) {    
 					ppe.x = 440
 		            ppe.y = 300
 		            ppe.costumeId = 0
