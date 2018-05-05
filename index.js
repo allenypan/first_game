@@ -176,11 +176,11 @@ function level_2() {
         if (level != 2) {
             return
         }
-        if (text_1 == 1 && text_2 == 10 && text_3 == 100 && text_4 == 1000 && text_5 == 10000 && text_6 == 100000) {
+        //if (text_1 == 1 && text_2 == 10 && text_3 == 100 && text_4 == 1000 && text_5 == 10000 && text_6 == 100000) {
             alert("恭喜過關!!")
             setBackdrop("white")
             next_level();
-        }
+        //}
         print(text_1, q1.x - 15, q1.y + 35, "white", 45);
         print(text_2, q2.x - 25, q2.y + 35, "white", 45);
         print(text_3, q3.x - 40, q3.y + 35, "white", 45);
@@ -575,6 +575,8 @@ function level_3() {
         scale: 0.2, // 1.2倍大
         costumes: ["神像3-器.png", "神像3-器-1.png"]
     });
+    var lolPassed = false;
+    var qqPassed = false;    
     way2.hidden = true
     ppot.hidden = true
     D.hidden = true
@@ -929,10 +931,15 @@ function level_3() {
             } else {
                 Isis_jj.hidden = false
             }
+            /*
             if (QQ2 == 0) {
                 QQ.hidden = true
             } else {
                 QQ.hidden = false
+            }*/
+            if (qqPassed)
+            {
+                QQ.hidden = false;
             }
             if (ii == 0) {
                 pot_jj.hidden = true
@@ -1511,6 +1518,7 @@ function level_3() {
                 ppe.y = 50
                 ppe.scale = 0.35
                 ppe5++
+                qqPassed = true;
             }, 1000);
         }
         if (QQ.touched(cursor) && r.costumeId == 3) {
@@ -1572,7 +1580,11 @@ function level_3() {
             lol2.hidden = false
             lol3.hidden = false
             lol4.hidden = false
+            /*
             if (Isis_jj2 == 1) {
+                Isis_jj.hidden = false
+            }*/
+            if (lolPassed == true) {  
                 Isis_jj.hidden = false
             }
             if (ppe2 == 0) {
@@ -1592,6 +1604,7 @@ function level_3() {
             }
         }
         if (lol.costumeId == 3 && lol2.costumeId == 0 && lol3.costumeId == 2 && lol4.costumeId == 1) {
+            lolPassed = true;
             lol.destroy()
             lol2.destroy()
             lol3.destroy()
