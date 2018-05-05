@@ -2030,30 +2030,33 @@ function level_3() {
 
     ppe.when("mousedown", function () {
 	    if (ppe2 == 1 && ppe3 == 0 && ppe4 == 1) {
+
 	        ppe.costumeId = 3
 	        ppe3 = 1
+
+			document.addEventListener('mousemove', DragPPE);
+
+			ppe.when("mouseup", function () {
+				document.removeEventListener('mousemove', DragPPE);
+				// Drop.
+		        if (ppe3 == 1 && ppe2 == 1 && (r.touched(ppe) && r.costumeId == 5)) {    
+					ppe.x = 440
+		            ppe.y = 300
+		            ppe.costumeId = 0
+		            ppe.scale = 0.7
+		            setTimeout(function () {
+		                ppe.costumeId = 2
+		                ppe4 = 1
+		            }, 1000);
+		            setTimeout(function () {
+		                ppe.x = 50
+		                ppe.y = 50
+		                ppe.scale = 0.35
+		            }, 2000);
+		
+		        }
+			});
 		}
-		document.addEventListener('mousemove', DragPPE);
-		ppe.when("mouseup", function () {
-			document.removeEventListener('mousemove', DragPPE);
-			// Drop.
-	        if (ppe3 == 1 && ppe2 == 1 && (r.touched(ppe) && r.costumeId == 5)) {    
-				ppe.x = 440
-	            ppe.y = 300
-	            ppe.costumeId = 0
-	            ppe.scale = 0.7
-	            setTimeout(function () {
-	                ppe.costumeId = 2
-	                ppe4 = 1
-	            }, 1000);
-	            setTimeout(function () {
-	                ppe.x = 50
-	                ppe.y = 50
-	                ppe.scale = 0.35
-	            }, 2000);
-	
-	        }
-		});
     });
 }
 
