@@ -115,7 +115,8 @@ function level_1() {
     });*/
 
     Ra.when("mousemove", function () {
-        check(Ra, 3)
+        //check(Ra, 3)
+		alert('cursor.x=' + cursor.x + ', cursor.y=', cursor.y);
     });
 
     Seth.when("click", function () {
