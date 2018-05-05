@@ -19,6 +19,8 @@ var sprites = [];
 
 
 function level_1() {
+	document.getElementById("loading").style.visibility = "hidden";
+
     var play = createSprite({
         x: 280,
         y: 250,
