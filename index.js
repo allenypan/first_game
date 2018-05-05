@@ -19,12 +19,6 @@ var sprites = [];
 
 
 function level_1() {
-	
-	// Test.
-	when("click", function () {
-		alert(1);
-    });
-
     var play = createSprite({
         x: 280,
         y: 250,
@@ -2101,6 +2095,12 @@ function level_4() {
             jjk.destroy()
         }
     });
+
+	// Test.
+	when("click", function () {
+		alert(1);
+    });
+
     when("click", function () {
         if (stairs == 1) {
             if (Osiris.touched(cursor)) {
