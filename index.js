@@ -9,11 +9,7 @@ Game.set({
     debugMode: true // Default: false
 });
 
-var pen = pen;
-pen.color = "red";
-pen.size = 30;
-pen.fillColor = "blue";
-pen.drawText('loading', 100, 100);
+setBackdrop("loading.gif");
 
 sound.play("1 Hour of Ancient Egyptian Music.mp3", true);
 Game.preload([
