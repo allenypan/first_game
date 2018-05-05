@@ -1454,7 +1454,7 @@ function level_3() {
             }
         }
         if (ppe.touched(cursor) && ppe2 == 1 && ppe3 == 0 && ppe4 == 0) {
-            ppe.costumeId = 1
+            //ppe.costumeId = 1
             ppe3 = 1
         } else if (ppe3 == 1 && ppe.touched(cursor) && ppe4 == 0) {
             ppe3 = 0
