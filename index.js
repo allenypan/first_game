@@ -116,8 +116,10 @@ function level_1() {
 // Test
     Ra.when("mousedown", function () {
         //check(Ra, 3)
-		Ra.x = cursor.x;
-		Ra.y = cursor.y;
+		when("mousemove", function () {
+			Ra.x = cursor.x;
+			Ra.y = cursor.y;
+		});
 		//alert('cursor.x=' + cursor.x + ', cursor.y=', cursor.y);
 		return;
     });
