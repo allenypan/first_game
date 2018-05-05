@@ -575,8 +575,6 @@ function level_3() {
         scale: 0.2, // 1.2倍大
         costumes: ["神像3-器.png", "神像3-器-1.png"]
     });
-    var lolPassed = false;
-    var qqPassed = false;    
     way2.hidden = true
     ppot.hidden = true
     D.hidden = true
@@ -711,23 +709,6 @@ function level_3() {
             elig.destroy()
             r.hidden = true
             next_level()
-        }
-
-        if (lol.costumeId == 3 && lol2.costumeId == 0 && lol3.costumeId == 2 && lol4.costumeId == 1) {
-            lol.destroy()
-            lol2.destroy()
-            lol3.destroy()
-            lol4.destroy()
-            cco.costumeId = 1
-            lol.costumeId = 0
-            lol2.costumeId = 0
-            lol3.costumeId = 0
-            lol4.costumeId = 0
-            cco.x += 20
-            cco.y -= 50
-            Isis_jj.hidden = false
-            Isis_jj.direction += 90
-			lolPassed = true;
         }
     });
     when("click", function () {
@@ -948,15 +929,10 @@ function level_3() {
             } else {
                 Isis_jj.hidden = false
             }
-            /*
             if (QQ2 == 0) {
                 QQ.hidden = true
             } else {
                 QQ.hidden = false
-            }*/
-            if (qqPassed)
-            {
-                QQ.hidden = false;
             }
             if (ii == 0) {
                 pot_jj.hidden = true
@@ -1535,7 +1511,6 @@ function level_3() {
                 ppe.y = 50
                 ppe.scale = 0.35
                 ppe5++
-                qqPassed = true;
             }, 1000);
         }
         if (QQ.touched(cursor) && r.costumeId == 3) {
@@ -1597,11 +1572,7 @@ function level_3() {
             lol2.hidden = false
             lol3.hidden = false
             lol4.hidden = false
-            /*
             if (Isis_jj2 == 1) {
-                Isis_jj.hidden = false
-            }*/
-            if (lolPassed == true) {  
                 Isis_jj.hidden = false
             }
             if (ppe2 == 0) {
@@ -1619,6 +1590,21 @@ function level_3() {
             } else {
                 pot_jj.hidden = false
             }
+        }
+        if (lol.costumeId == 3 && lol2.costumeId == 0 && lol3.costumeId == 2 && lol4.costumeId == 1) {
+            lol.destroy()
+            lol2.destroy()
+            lol3.destroy()
+            lol4.destroy()
+            cco.costumeId = 1
+            lol.costumeId = 0
+            lol2.costumeId = 0
+            lol3.costumeId = 0
+            lol4.costumeId = 0
+            cco.x += 20
+            cco.y -= 50
+            Isis_jj.hidden = false
+            Isis_jj.direction += 90
         }
         if (mummy.touched(cursor)) {
             mummy_up.x = 320
