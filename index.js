@@ -176,11 +176,11 @@ function level_2() {
         if (level != 2) {
             return
         }
-        if (text_1 == 1 && text_2 == 10 && text_3 == 100 && text_4 == 1000 && text_5 == 10000 && text_6 == 100000) {
+        //if (text_1 == 1 && text_2 == 10 && text_3 == 100 && text_4 == 1000 && text_5 == 10000 && text_6 == 100000) {
             alert("恭喜過關!!")
             setBackdrop("white")
             next_level();
-        }
+        //}
         print(text_1, q1.x - 15, q1.y + 35, "white", 45);
         print(text_2, q2.x - 25, q2.y + 35, "white", 45);
         print(text_3, q3.x - 40, q3.y + 35, "white", 45);
