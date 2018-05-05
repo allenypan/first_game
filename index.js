@@ -112,26 +112,9 @@ function level_1() {
     Isis.when("click", function () {
         check(Isis, 4)
     });
-
     Ra.when("click", function () {
         check(Ra, 3)
     });
-/*
-// Test
-	function onMouseMove() {
-		Ra.x = cursor.x;
-		Ra.y = cursor.y;	
-	}	
-    Ra.when("mousedown", function () {
-        //check(Ra, 3)
-		//onMouseMove();
-		document.addEventListener('mousemove', onMouseMove);
-		Ra.when("mouseup", function () {
-			document.removeEventListener('mousemove', onMouseMove);
-		});
-		return;
-    });*/
-
     Seth.when("click", function () {
         check(Seth, 2)
     });
@@ -1477,10 +1460,8 @@ function level_3() {
             ppe3 = 0
             ppe.costumeId = 0
         }
-        if (ppe.touched(cursor) && ppe2 == 1 && ppe3 == 0 && ppe4 == 1) {
-            ppe.costumeId = 3
-            ppe3 = 1
-        } else if (ppe3 == 1 && ppe.touched(cursor) && ppe4 == 1) {
+
+		if (ppe3 == 1 && ppe.touched(cursor) && ppe4 == 1) {
             ppe3 = 0
             ppe.costumeId = 2
         }
@@ -1527,23 +1508,7 @@ function level_3() {
             r.costumeId = 5
             r.scale = 0.5
         }
-        if (ppe3 == 1 && ppe2 == 1 && (r.touched(cursor) && r.costumeId == 5)) {
-            //alert(1);
-			ppe.x = 440
-            ppe.y = 300
-            ppe.costumeId = 0
-            ppe.scale = 0.7
-            setTimeout(function () {
-                ppe.costumeId = 2
-                ppe4 = 1
-            }, 1000);
-            setTimeout(function () {
-                ppe.x = 50
-                ppe.y = 50
-                ppe.scale = 0.35
-            }, 2000);
 
-        }
         if (iew.touched(cursor) && ppe2 == 1 && ppe3 == 1 && ppe4 == 1 && ppe5 == 0) {
             ppe.x = 400
             ppe.y = 300
@@ -2055,6 +2020,40 @@ function level_3() {
         if (and == 0) {
             return
         }
+    });
+
+	// Drag.	
+	function DragPPE() {
+		ppe.x = cursor.x;
+		ppe.y = cursor.y;	
+	}		
+
+    ppe.when("mousedown", function () {
+	    if (ppe2 == 1 && ppe3 == 0 && ppe4 == 1) {
+	        ppe.costumeId = 3
+	        ppe3 = 1
+		}
+		document.addEventListener('mousemove', DragPPE);
+		ppe.when("mouseup", function () {
+			document.removeEventListener('mousemove', DragPPE);
+			// Drop.
+	        if (ppe3 == 1 && ppe2 == 1 && (r.touched(ppe) && r.costumeId == 5)) {    
+				ppe.x = 440
+	            ppe.y = 300
+	            ppe.costumeId = 0
+	            ppe.scale = 0.7
+	            setTimeout(function () {
+	                ppe.costumeId = 2
+	                ppe4 = 1
+	            }, 1000);
+	            setTimeout(function () {
+	                ppe.x = 50
+	                ppe.y = 50
+	                ppe.scale = 0.35
+	            }, 2000);
+	
+	        }
+		});
     });
 }
 
