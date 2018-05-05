@@ -2054,7 +2054,11 @@ function level_3() {
 		                ppe.scale = 0.35
 		            }, 2000);
 		
-		        }
+		        } else {
+		            ppe.scale = 0.3
+		            ppe.x = 50
+		            ppe.y = 50
+				}
 			});
 		}
     });
