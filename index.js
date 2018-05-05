@@ -109,9 +109,15 @@ function level_1() {
     Isis.when("click", function () {
         check(Isis, 4)
     });
+/*
     Ra.when("click", function () {
         check(Ra, 3)
+    });*/
+
+    Ra.when("mousemove", function () {
+        check(Ra, 3)
     });
+
     Seth.when("click", function () {
         check(Seth, 2)
     });
@@ -2095,12 +2101,6 @@ function level_4() {
             jjk.destroy()
         }
     });
-
-	// Test.
-	when("click", function () {
-		alert(1);
-    });
-
     when("click", function () {
         if (stairs == 1) {
             if (Osiris.touched(cursor)) {
