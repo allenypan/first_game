@@ -120,7 +120,7 @@ function level_1() {
 	}	
     Ra.when("mousedown", function () {
         //check(Ra, 3)
-		onMouseMove();
+		//onMouseMove();
 		document.addEventListener('mousemove', onMouseMove);
 		Ra.when("mouseup", function () {
 			document.removeEventListener('mousemove', onMouseMove);
