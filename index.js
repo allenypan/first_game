@@ -2029,7 +2029,7 @@ function level_3() {
 	}		
 
     ppe.when("mousedown", function () {
-	    if (ppe2 == 1) {
+	    if (ppe2 == 1 && ppe.costumeId != 2) {
 
 	        //ppe.costumeId = 3
 	        //ppe3 = 1
