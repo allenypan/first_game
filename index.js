@@ -82,6 +82,7 @@ function level_1() {
     when("click", function () {
         if (stair == 0) {
             setBackdrop("88.jpg");
+			document.getElementById("loading").style.display = "none";
             play.destroy()
             Ra.hidden = false
             Shu.hidden = false
@@ -132,8 +133,6 @@ function level_1() {
     Seth.when("click", function () {
         check(Seth, 2)
     });
-
-	// document.getElementById("loading").style.display = "none";
 }
 
 
