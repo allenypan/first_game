@@ -19,7 +19,6 @@ var sprites = [];
 
 
 function level_1() {
-	document.getElementById("loading").style.visibility = "hidden";
 
     var play = createSprite({
         x: 280,
@@ -133,6 +132,8 @@ function level_1() {
     Seth.when("click", function () {
         check(Seth, 2)
     });
+
+	document.getElementById("loading").style.visibility = "hidden";
 }
 
 
