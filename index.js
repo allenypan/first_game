@@ -113,10 +113,12 @@ function level_1() {
     Ra.when("click", function () {
         check(Ra, 3)
     });*/
-
-    Ra.when("mousemove", function () {
+// Test
+    Ra.when("mousedown", function () {
         //check(Ra, 3)
-		alert('cursor.x=' + cursor.x + ', cursor.y=', cursor.y);
+		Ra.x = cursor.x;
+		Ra.y = cursor.y;
+		//alert('cursor.x=' + cursor.x + ', cursor.y=', cursor.y);
 		return;
     });
 
