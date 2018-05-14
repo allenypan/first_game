@@ -16,10 +16,6 @@ Game.preload([
 });
 var level = 0;
 var sprites = [];
-var time = 0
-setInterval(function(){
-    time++
-},1000)
 function level_1() {
     var play = createSprite({
         x: 280,
@@ -2182,12 +2178,6 @@ function level_5() {
         playing.hidden = false
         ppap = 1
     });
-    forever(function(){
-        if(ppap == 1){
-            print(time,320,240,60,"black")
-	    stop()
-        }
-    })
 }
 
 function next_level() {
